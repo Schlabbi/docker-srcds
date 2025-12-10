@@ -9,7 +9,7 @@ Valve call this Server [Source SDK Base 2013 Dedicated Server](https://steamdb.i
 ```
 docker run -it \
     --expose 27015 \
-    hackebein/srcds
+    schlabbi/srcds
 ```
 
 ## Enable API
@@ -18,7 +18,7 @@ docker run -it \
 docker run -it \
     --expose 27015 \
     -e "AUTHKEY=..." \
-    hackebein/srcds
+    schlabbi/srcds
 ```
 Get your [AUTHKEY](http://steamcommunity.com/dev/apikey)
 
@@ -29,7 +29,7 @@ If you have activated the API, this step happens automatically.
 docker run -it \
     --expose 27015 \
     -e "GLST=..." \
-    hackebein/srcds
+    schlabbi/srcds
 ```
 
 Get your [GLST](http://steamcommunity.com/dev/managegameservers) (`APPID: 244310`)
@@ -44,7 +44,7 @@ docker run -it \
     -e "SIGNALS_ENABLE=true"
     -v ./SIGINT_before.sh:/opt/steam/SIGINT_before.sh \
     -v ./SIGTERM_after.sh:/opt/steam/SIGTERM_after.sh \
-    hackebein/srcds
+    schlabbi/srcds
 ```
 
 ## Overlay folder
@@ -55,7 +55,7 @@ Copy files over before start server
 docker run -it \
     --expose 27015 \
     -v ./overlay:/opt/overlay \
-    hackebein/srcds
+    schlabbi/srcds
 ```
 
 ## SourceMod Plugins
@@ -70,7 +70,7 @@ docker run -it \
     -e "SOURCEMOD_PLUGINS_ENABLE=admin-flatfile,adminhelp,adminmenu,antiflood,basebans,basechat,basecomm,basecommands,basetriggers,basevotes,clientprefs,funcommands,funvotes,myplugin1,myplugin2,nextmap,playercommands,reservedslots,sounds" \
     -v ./myplugin2.smx:/opt/misc/myplugin2.smx \
     -v ./overlay:/opt/overlay \
-    hackebein/srcds
+    schlabbi/srcds
 ```
 
 ## Additional Environment
@@ -136,4 +136,4 @@ CUSTOMPARAMETERS: additional parameters
 
 ## More Options
 
-You can found more configuration options on the parent image page [hackebein/steamcmd](https://hub.docker.com/r/hackebein/steamcmd)
+You can found more configuration options on the parent image page [schlabbi/steamcmd](https://hub.docker.com/r/schlabbi/steamcmd)

@@ -1,4 +1,4 @@
-FROM hackebein/steamcmd:20.04
+FROM schlabbi/steamcmd
 ENV SIGNALS_ENABLE="false" \
 	UID="0" \
 	# Port configuration
@@ -57,7 +57,6 @@ RUN apt update \
         curl \
         jq \
         lib32stdc++6 \
-		libtinfo5:i386 \
         unzip \
  && apt clean \
  && rm -rf \

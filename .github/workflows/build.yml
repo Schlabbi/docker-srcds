@@ -24,4 +24,4 @@ jobs:
       with:
         push: 'true'
         platforms: linux/amd64
-        tags: hackebein/srcds:latest
+        tags: schlabbi/srcds:latest
